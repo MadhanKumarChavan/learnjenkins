@@ -1,23 +1,28 @@
 pipeline {
     agent {
-    label 'ansible'
+    label 'workstation'
         }
 
     stages {
-        stage('Build') {
+        stage('Build/compile') {
             steps {
-                echo 'MADHAN..'
+                echo 'compile'
             }
         }
-        stage('Test') {
+        stage('unit Test') {
             steps {
-                echo 'raja..'
+                echo 'unit tests'
             }
         }
-        stage('Deploy') {
+        stage('quality control') {
             steps {
-                echo 'Deploying....'
+                echo 'quality control'
             }
+        }
+        stage('upload in centralized place') {
+             steps {
+                echo 'upload'
+             }
         }
     }
 }
