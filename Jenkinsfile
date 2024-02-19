@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+    label 'ansible'
+        }
 
     stages {
         stage('Build') {
@@ -9,7 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'LAKSHMI..'
+                echo 'raja..'
             }
         }
         stage('Deploy') {
